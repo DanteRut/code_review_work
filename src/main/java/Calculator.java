@@ -1,5 +1,4 @@
 public class Calculator {
-
     public int add(int a, int b) {
         return a + b;
     }
@@ -20,15 +19,14 @@ public class Calculator {
     }
 
     public int solver() {
-        int a = 10;
-        int b = 5;
+        int a = 100, b = 10, result = 0;
 
-        int sum = add(a, b);
-        int difference = dif(a, b);
-        int product = times(a, b);
-        int quotient = div(a, b);
-        
-        return sum + difference + product + quotient;
+        result+= add(a,b);
+        result+= dif(a,b);
+        result+= div(a,b);
+        result+= times(a,b);
+
+        return result;
     }
 }
 
