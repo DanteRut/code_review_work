@@ -1,10 +1,11 @@
-name: Java CI with Gradle (Задание 1)
+name: Java CI with Gradle (Задание 3)
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
   schedule:
     - cron: "30 12 * * 3"
     - cron: "0 22 * * 5"
@@ -26,8 +27,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           java-version: ${{ matrix.java }}
-          distribution: zulu
-
+          distribution: temurin
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
